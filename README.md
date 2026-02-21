@@ -103,4 +103,60 @@ DV 寫 SystemVerilog 的面試，通常會考：
 - 寫 code：10〜20 分鐘  
 - 看題解（如果有卡）：10 分鐘，把關鍵想法寫在你自己的筆記裡。  
 
-***
+
+----
+----
+
+
+你這個情況其實很典型：不是「邏輯差」，而是缺少把題意轉成模型（小例子→規律→解法）的訓練；用 LeetCode 刻意練這件事很有效。你又是要做 SystemVerilog DV，通常更需要「基本 coding＋思路清楚」而不是很刁鑽的演算法題。 
+
+## 先把你那題「開燈關燈」釐清
+你提到的關燈開燈題，最後會亮著的是「完全平方數門號」（1,4,9,…），因為只有完全平方數的因數個數是奇數，所以翻轉次數才會是奇數、最後停在開。
+
+這題卡住的點多半是「看不懂題意→沒做小規模驗證→沒發現規律」，所以接下來刷題我會刻意讓你練：**先模擬 10 筆**、再找規律、最後才寫高效解。
+
+## 針對 DV 面試的刷題方向
+很多 ASIC/DV 面試不一定走純 LeetCode hard 路線，反而常見的是基本 coding、看懂邏輯、把流程寫清楚（像 counter、pipe、array 操作、簡單資料結構）。 
+
+因此你的 LeetCode 題我建議集中在這些「很像 testbench/driver 思維」的能力：
+- 模擬與邊界條件（for-loop、狀態更新、off-by-one）
+- 位元/二進位思維（XOR、bit count、mask）
+- 簡單資料結構（stack/queue/hash）
+- 字串解析（像 protocol parsing 的縮小版）
+
+## 兩週「基本中基本」題單（照順序刷）
+每天 2 題就好：第 1 題要求 20 分鐘內寫完；第 2 題允許卡住但要寫出「題意重述＋3 個測資＋你預期輸出」。
+
+### Week 1：模擬＋位元（最像硬體直覺）
+- 412 Fizz Buzz（練規則翻譯成程式）
+- 9 Palindrome Number（練邊界與條件）
+- 13 Roman to Integer（練規則與掃描）
+- 69 Sqrt(x)（練二分＋邊界）
+- 367 Valid Perfect Square（對應你完全平方數敏感度）
+- 231 Power of Two
+- 191 Number of 1 Bits
+- 338 Counting Bits
+- 136 Single Number（XOR）
+- 268 Missing Number（XOR/求和都可）
+
+### Week 2：資料結構＋字串（最像 DV 裡的資料流）
+- 20 Valid Parentheses（stack）
+- 155 Min Stack（stack）
+- 232 Implement Queue using Stacks（queue/stack 互轉）
+- 217 Contains Duplicate（hash set）
+- 242 Valid Anagram（hash/計數）
+- 49 Group Anagrams（分類）
+- 125 Valid Palindrome（two pointers）
+- 283 Move Zeroes（很像 SV array manipulation）
+- 344 Reverse String
+- 704 Binary Search（把二分模板背熟）
+
+如果你想走官方整理好的清單，也可以從 LeetCode 的「Top Interview Questions – Easy」挑題，當成每日題庫來源。 [leetcode](https://leetcode.com/explore/interview/card/top-interview-questions-easy/)
+
+## 你最需要補的：看題目→抽模型（固定流程）
+每一題都強制做這 4 步（你 CPE 卡關大概率是少了這套）：
+1. 用自己的話重寫題意（禁止照抄題面）。
+2. 手算最小例子：n=1、n=2、再一個你自己設計的反例。
+3. 寫出「狀態怎麼變」：每一步更新哪些變數（這就是 DV 寫 checker/scoreboard 的核心）。
+4. 最後才上 code；寫完立刻用你手算例子 dry-run 一次。
+
