@@ -27,12 +27,12 @@ DV 寫 SystemVerilog 的面試，通常會考：
 
 這些題都像在 trace waveform / state，練你細心＋條理：  
 
-- 66. Plus One  
-- 67. Add Binary（同時練 bit 概念）  
-- 289. Game of Life（細緻模擬狀態更新）  
-- 844. Backspace String Compare（模擬 stack 行為） 
-- 125. Valid Palindrome（指標＋條件判斷）  
-- 682. Baseball Game（多步驟規則模擬）  
+- 66 Plus One  
+- 67 Add Binary（同時練 bit 概念）  
+- 289 Game of Life（細緻模擬狀態更新）  
+- 844 Backspace String Compare（模擬 stack 行為） 
+- 125 Valid Palindrome（指標＋條件判斷）  
+- 682 Baseball Game（多步驟規則模擬）  
 
 練法建議：  
 - 刻意用「paper trace」：自己在紙上跑一兩個例子，把每一步狀態寫出來，當作在 trace signal。  
@@ -42,12 +42,12 @@ DV 寫 SystemVerilog 的面試，通常會考：
 
 這類題讓你建立「看到題目就會往數學性質想」的直覺：  
 
-- 231. Power of Two（認識 \(n \& (n-1)\) trick） 
-- 326. Power of Three  
-- 202. Happy Number（反覆操作＋偵測循環，可用 set）  
-- 204. Count Primes（質數篩）  
-- 263. Ugly Number  
-- 類似 279. Perfect Squares（跟你說的「完全平方數」題概念很像）
+- 231 Power of Two（認識 \(n \& (n-1)\) trick） 
+- 326 Power of Three  
+- 202 Happy Number（反覆操作＋偵測循環，可用 set）  
+- 204 Count Primes（質數篩）  
+- 263 Ugly Number  
+- 類似 279 Perfect Squares（跟你說的「完全平方數」題概念很像）
 
 這些題做多了，「平方、因數個數、bit pattern」會變成直覺，而不是考場才第一次遇到。  
 
@@ -55,14 +55,13 @@ DV 寫 SystemVerilog 的面試，通常會考：
 
 這一類非常貼近硬體／DV：  
 
--  191. Number of 1 Bits  
--  190. Reverse Bits  
--  136. Single Number（利用 XOR 性質）  
--  389. Find the Difference（XOR 思維再練一次）  
--  338. Counting Bits（DP＋bit 小技巧）  
--  371. Sum of Two Integers（不使用「+」，只用 bit 運算）  
+-  191 Number of 1 Bits  
+-  190 Reverse Bits  
+-  136 Single Number（利用 XOR 性質）  
+-  389 Find the Difference（XOR 思維再練一次）  
+-  338 Counting Bits（DP＋bit 小技巧）  
+-  371 Sum of Two Integers（不使用「+」，只用 bit 運算）  
 
-如果想更系統練 bit，可以看專門整理 bit 題單或教學影片。 [youtube](https://www.youtube.com/watch?v=dhwPOn84DGg)
 
 ***
 
