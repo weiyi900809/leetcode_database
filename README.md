@@ -55,12 +55,12 @@ DV 寫 SystemVerilog 的面試，通常會考：
 
 這一類非常貼近硬體／DV：  
 
-- 191. Number of 1 Bits  
-- 190. Reverse Bits  
-- 136. Single Number（利用 XOR 性質）  
-- 389. Find the Difference（XOR 思維再練一次）  
-- 338. Counting Bits（DP＋bit 小技巧）  
-- 371. Sum of Two Integers（不使用「+」，只用 bit 運算）  
+-  191. Number of 1 Bits  
+-  190. Reverse Bits  
+-  136. Single Number（利用 XOR 性質）  
+-  389. Find the Difference（XOR 思維再練一次）  
+-  338. Counting Bits（DP＋bit 小技巧）  
+-  371. Sum of Two Integers（不使用「+」，只用 bit 運算）  
 
 如果想更系統練 bit，可以看專門整理 bit 題單或教學影片。 [youtube](https://www.youtube.com/watch?v=dhwPOn84DGg)
 
